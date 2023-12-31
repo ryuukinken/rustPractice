@@ -1,3 +1,4 @@
+use std::any::type_name;
 use std::cmp::Ordering;
 use std::io;
 use rand::Rng;
@@ -46,8 +47,9 @@ fn data_types(){
     let i16:i16 = -16;
     // 範囲0から2^16まで
     let u16:u16 = 16;
-    // 範囲-(2^31)から2^31 - 1まで
-    let i32:i32 = -32;
+    // 範囲-(2^31)から2^31 - 1まで　
+    let i32:i32 = -32; //※デフォルト値（基準型）
+    // let i32_default = -32;
     // 範囲0から2^32まで
     let u32:u32 = 32;
     // 範囲-(2^63)から2^63 - 1まで
@@ -59,5 +61,23 @@ fn data_types(){
     let i_size:isize = 128;
     let u_size:usize = 128;
 
-    println!("これらの数字は:{},{},{},{},{},{},{},{},{},{}",i8,u8,i16,u16,i32,u32,i64,u64,i_size,u_size);
+    // 小数型
+    let f32:f32 = 1.1;
+    let f64:f64 = 2.2;//※デフォルト値（基準型）
+    // let f64_default = 2.2;
+
+    // タブル型
+    let tup:(i32,&str,bool) = (32,"文字列",false);
+
+    // 配列
+    // let array1= [1,2,1,3];
+    // let array2 = [i64,5]; // [-64,5]
+    let array3 = [3,5]; // [3,3,3,3,3]
+
+    for x in array3 {
+        println!("{}",x);
+    };
+
+    println!("これらの数字は:{},{},{},{},{},{},{},{},{},{},{},{},{},{},{}",
+             i8,u8,i16,u16,i32,u32,i64,u64,i_size,u_size,f32,f64,tup.0,tup.1,tup.2);
 }
