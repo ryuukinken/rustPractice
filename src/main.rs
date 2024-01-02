@@ -1,3 +1,5 @@
+mod ownership;
+
 use std::any::type_name;
 use std::cmp::Ordering;
 use std::io;
@@ -5,7 +7,10 @@ use rand::Rng;
 
 fn main() {
    // guess_number();
-    data_types();
+   //  data_types();
+    ownership::ownership_practice();
+    let cal = ownership::value_plus_function(89, 64);
+    println!("{}",cal);
 }
 
 fn guess_number(){
