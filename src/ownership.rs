@@ -16,3 +16,7 @@ pub(crate) fn ownership_practice(){
 pub(crate) fn value_plus_function(x:i64, y:i64) -> i64{
     return x+y;
 }
+// 戻り値なし関数
+pub fn print_hello_world(){
+    println!("hello World!")
+}

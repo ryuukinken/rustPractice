@@ -9,6 +9,7 @@ fn main() {
    // guess_number();
    //  data_types();
     ownership::ownership_practice();
+    ownership::print_hello_world();
     let cal = ownership::value_plus_function(89, 64);
     println!("{}",cal);
 }
